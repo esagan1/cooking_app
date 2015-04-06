@@ -45,5 +45,7 @@ group :development, :test do
   gem 'httparty'
   gem 'pry-rails'
   gem 'nokogiri'
+  gem 'bootstrap-sass', '~> 3.3.4'
+  gem 'rails_12factor', group: :production
 end
 

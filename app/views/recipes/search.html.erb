@@ -3,7 +3,7 @@
  <%= image_tag @result['recipe']['image_url'] %> 
 </ul>
  <h1><%= @result['recipe']['title'] %></h1>
- <div center-align>
+ <div>
 <% @result['recipe']['ingredients'].each do |ingredient|%>
 <li><%= ingredient %></li>
 <% end %>
