@@ -1,0 +1,14 @@
+<h1>TEST</h1>
+
+ <form action="/recipes" method="get">
+  <label>Search: <input name="search"></label>
+  <button>Submit</button>
+ </form>
+
+
+ <ul>
+  <% @results.each do |result| %>
+    <li><a href="/search/<%= result['recipe_id'] %>"><%= result['title'] %></a></li>
+
+  <% end %>
+ </ul>

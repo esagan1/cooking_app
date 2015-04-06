@@ -1,0 +1,30 @@
+
+  <ul> 
+ <%= image_tag @result['recipe']['image_url'] %> 
+</ul>
+ <h1><%= @result['recipe']['title'] %></h1>
+ <div center-align>
+<% @result['recipe']['ingredients'].each do |ingredient|%>
+<li><%= ingredient %></li>
+<% end %>
+</div>
+
+
+ <h1><%= @result['title'] %></h1>
+
+
+ <%= image_tag @result['recipes']  %>
+
+ <% if @favorite.new_record? %>
+  <%= form_for @favorite do |f| %>
+    <%= f.hidden_field :recipe_id %>
+    <%= f.hidden_field :title %>
+    <%= f.submit 'Recommend' %>
+  <% end %>
+
+ <% else %>
+  	<%= form_for @favorite, :method => :delete do |f| %>
+    <%= f.submit 'Take back recommendation' %>
+  <% end %>
+
+  <% end %>
